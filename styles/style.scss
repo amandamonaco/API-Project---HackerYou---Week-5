@@ -11,11 +11,8 @@ body {
 }
 
 .wrapper, .headerWrapper {
-	display: flex;
-	flex-wrap: wrap;
-	width: 90%;
+	width: 90%; 
 	margin:0 auto;
-	justify-content: space-between;
 }
 
 p{
@@ -36,21 +33,61 @@ img{
 header {
 	height:100vh;
 	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: 900px){
+		height: 600px;
+	}
+	@media (max-width: 600px){
+		height: 300px;
+	}
 	.headerWrapper{
 		display: flex;
 		flex-direction:column;
-		justify-content:center;
 		align-items:center;
-		padding-top: 200px;
 	}
 }
 
 div.headerWrapper{
 	width:90%;
+	@media (max-width: 580px){
+		width: 85%;
+	}
+	h1{
+		font-family: 'comic_zine_otregular', sans-serif;
+		font-size: 120px;
+		text-align: center;
+		color: $coolGreen;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		@media (max-width: 600px){
+			font-size: 70px;
+		}
+		span.responsiveTitle{
+			@media (max-width: 580px){
+				font-size: 70px;
+			}
+			@media (max-width: 345px){
+				font-size: 60px;
+			}
+		}
+	}
 	a{
 		-webkit-animation: bounce 2s infinite ease-in-out;
 		outline:none;
 		padding-top: 25px;
+		img{
+			height: 270px;
+			width: 200px;
+			@media (max-width: 900px){
+				height: 200px;
+				width: 130px;
+			}
+			@media (max-width: 700px){
+				display: none;
+			}
+		}
 	}
 }
 
@@ -60,15 +97,7 @@ div.headerWrapper{
 	80% { -webkit-transform: translateY(-10px); }
 }
 
-h1{
-	font-family: 'comic_zine_otregular', sans-serif;
-	font-size: 120px;
-	text-align: center;
-	color: $coolGreen;
-	position: relative;
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
+
 
 // MAIN SECTION STYLES-----------------------------------------
 
@@ -78,11 +107,24 @@ section.main{
 	height:100vh;
 	background: $coolGreen;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content:center;
 	align-items:center;
+	@media (max-width: 800px){
+		height: 700px;
+	}
+	@media (max-width: 700px){
+		height: 650px;
+	}
+	@media (max-width: 600px){
+		height: 600px;
+	}
+	@media (max-width: 500px){
+		height: 800px;
+	}
 	div.innerWrapper{
 		display:flex;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 		justify-content:space-between;
 		align-items:center;
 		a{
@@ -90,7 +132,7 @@ section.main{
 			width: 16%;
 			color: $pineappleYellow;
 			outline:none;
-			@media (max-width: 768px){
+			@media (max-width: 1000px){
 				width:30%;
 			}
 			@media (max-width: 480px){
@@ -172,6 +214,9 @@ section.results{
 					margin-top: 5px;
 					font-size: 40px;
 					color: $hotPink;
+					@media(max-width: 600px){
+						font-size: 30px;
+					}
 				}
 				h3{
 					font-family: 'Lato', sans-serif;
